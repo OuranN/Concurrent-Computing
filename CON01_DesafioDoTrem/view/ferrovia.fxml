@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="846.0" prefWidth="845.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.351" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="846.0" fitWidth="845.0" pickOnBounds="true">
+         <image>
+            <Image url="@../img/Background.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="background" fitHeight="688.0" fitWidth="814.0" layoutX="-24.0" layoutY="-93.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/PistaTopDown.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="692.0" layoutY="24.0" prefHeight="125.0" prefWidth="126.0" style="-fx-background-radius: 300; -fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="140.0" fitWidth="138.0" layoutX="-6.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/TrailCrossing.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ImageView fitHeight="300.0" fitWidth="105.0" layoutX="264.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Trilho1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="33.0" fitWidth="85.0" layoutX="792.0" layoutY="635.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/pet.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="300.0" fitWidth="105.0" layoutX="266.0" layoutY="364.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+         <image>
+            <Image url="@../img/Trilho1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="300.0" fitWidth="105.0" layoutX="262.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Trilho2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="tremVermelho" fitHeight="19.0" fitWidth="69.0" layoutX="252.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
+         <image>
+            <Image url="@../img/trem1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="tremMarron" fitHeight="19.0" fitWidth="69.0" layoutX="328.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
+         <image>
+            <Image url="@../img/trem2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="82.0" fitWidth="109.0" layoutX="301.0" layoutY="572.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/pedra.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="213.0" fitWidth="293.0" layoutX="331.0" layoutY="628.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/TelaDeMadeira.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="labelTrem2" layoutX="429.0" layoutY="652.0" text="Trem Marron" textFill="WHITE">
+         <font>
+            <Font name="Consolas Bold" size="16.0" />
+         </font>
+      </Label>
+      <RadioButton cache="true" cacheHint="QUALITY" layoutX="386.0" layoutY="696.0" mnemonicParsing="false" onAction="#topLeftBrown" text="Superior Esquerdo" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Consolas Bold" size="14.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="brown" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="386.0" layoutY="726.0" mnemonicParsing="false" onAction="#topRightBrown" text="Superior Direito" textFill="WHITE" toggleGroup="$brown">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Consolas Bold" size="14.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="386.0" layoutY="756.0" mnemonicParsing="false" onAction="#bottomLeftBrown" text="Inferior Esquerdo" textFill="WHITE" toggleGroup="$brown">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Consolas Bold" size="14.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="386.0" layoutY="786.0" mnemonicParsing="false" onAction="#bottomRightBrown" text="Inferior Direito" textFill="WHITE" toggleGroup="$brown">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Consolas Bold" size="14.0" />
+         </font>
+      </RadioButton>
+      <Slider fx:id="sliderMarron" layoutX="507.0" layoutY="727.0" majorTickUnit="50.0" max="100" min="0" rotate="-90.0" showTickMarks="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Slider>
+      <ImageView fitHeight="82.0" fitWidth="109.0" layoutX="237.0" layoutY="571.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/pedra.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="-21.0" layoutY="-24.0" prefHeight="629.0" prefWidth="692.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: white; -fx-border-width: 10;" />
+      <ImageView fitHeight="212.0" fitWidth="293.0" layoutX="10.0" layoutY="630.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/TelaDeMadeira.png" />
+         </image>
+      </ImageView>
+   
+                  <Slider fx:id="sliderVermelho" layoutX="188.0" layoutY="729.0" majorTickUnit="50.0" min="0" rotate="-90.0" showTickMarks="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Slider>
+      <Label layoutX="99.0" layoutY="652.0" text="Trem Vermelho" textFill="WHITE">
+         <font>
+            <Font name="Consolas Bold" size="16.0" />
+         </font>
+      </Label>
+      <RadioButton cache="true" cacheHint="QUALITY" layoutX="67.0" layoutY="699.0" mnemonicParsing="false" onAction="#topLeftRed" text="Superior Esquerdo" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Consolas Bold" size="14.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="red" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="67.0" layoutY="729.0" mnemonicParsing="false" onAction="#topRightRed" text="Superior Direito" textFill="WHITE" toggleGroup="$red">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Consolas Bold" size="14.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="67.0" layoutY="759.0" mnemonicParsing="false" onAction="#bottomLeftRed" text="Inferior Esquerdo" textFill="WHITE" toggleGroup="$red">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Consolas Bold" size="14.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="67.0" layoutY="789.0" mnemonicParsing="false" onAction="#bottomRightRed" text="Inferior Direito" textFill="WHITE" toggleGroup="$red">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Consolas Bold" size="14.0" />
+         </font>
+      </RadioButton>
+      <Label fx:id="labelTrem1" layoutX="113.0" layoutY="673.0" style="-fx-background-color: #6E1413; -fx-background-radius: 20; -fx-label-padding: 3;" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Consolas Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelTrem2" layoutX="440.0" layoutY="673.0" style="-fx-background-color: #6E1413; -fx-background-radius: 20; -fx-label-padding: 3;" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Consolas Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="reset" layoutX="688.0" layoutY="754.0" mnemonicParsing="false" onAction="#resetAll" prefHeight="58.0" prefWidth="109.0" style="-fx-background-color: transparent;" textFill="WHITE">
+         <font>
+            <Font name="Ubuntu Medium" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="reset1" layoutX="635.0" layoutY="767.0" mnemonicParsing="false" onAction="#resetAll" prefHeight="58.0" prefWidth="38.0" style="-fx-background-color: transparent;" textFill="WHITE">
+         <font>
+            <Font name="Ubuntu Medium" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fx:id="reset" fitHeight="41.0" fitWidth="38.0" onDragDetected="#resetAll" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/reset.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ImageView fitHeight="100.0" fitWidth="141.0" layoutX="692.0" layoutY="314.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/TelaDeMadeira.png" />
+         </image>
+      </ImageView>
+      <Slider fx:id="sliderGeral" layoutX="707.0" layoutY="364.0" majorTickUnit="50.0" max="100" min="0" prefHeight="33.0" prefWidth="109.0" showTickMarks="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Slider>
+      <Label fx:id="labelTrem211" layoutX="708.0" layoutY="330.0" text="Velocidade Geral" textFill="WHITE">
+         <font>
+            <Font name="Consolas Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
