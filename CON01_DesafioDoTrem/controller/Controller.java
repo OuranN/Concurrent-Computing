@@ -24,6 +24,9 @@ public class Controller {
   private Slider sliderVermelho, sliderMarron, sliderGeral;
   @FXML
   private ImageView tremVermelho, tremMarron;
+  TremMarron tm=new TremMarron();
+  TremVermelho tv=new TremVermelho();
+  
 
   Trem tremRed;
   Trem tremBrown;
@@ -32,31 +35,10 @@ public class Controller {
    * Define acoes a serem executadas ao iniciar a classe
   */
   public void initialize() {
-    tremRed = new Trem(tremVermelho, 1);
-    tremBrown = new Trem(tremMarron, 2);
-    tremRed.iniciarPercurso();                                                            // Define as propriedade necessarias para iniciar o percurso do Trem Marron
-    tremBrown.iniciarPercurso();                                                          // Define as propriedade necessarias para iniciar o percurso do Trem Vermelho
 
-    sliderVermelho.valueProperty().addListener((observable, oldValue, newValue) -> {
-      double valor = newValue.doubleValue();
-      labelTrem1.setVisible(true);                                                        // Torna a label de velocidade do trem vermelho visivel
-      labelTrem1.setText(" " + (int) valor + " km/h ");                                   // Exibe a velocidade na label do trem vermelho
-      tremRed.alterarVelocidade(sliderVermelho.getValue());});                            // Utiliza  o valor do slider para alterar a velocidade do trem vermelho
-
-    sliderMarron.valueProperty().addListener((observable, oldValue, newValue) -> {
-      double valor = newValue.doubleValue();
-      labelTrem2.setVisible(true);                                                        // Torna a label de velocidade do trem Marron visivel
-      labelTrem2.setText(" " + (int) valor + " km/h ");                                   // Exibe a velocidade na label do trem Marron
-      tremBrown.alterarVelocidade(sliderMarron.getValue());});                            // Utiliza  o valor do slider para alterar a velocidade do trem marron
-
-    sliderGeral.valueProperty().addListener((observable, oldValue, newValue) -> {         // Realiza as mesmas acoes dos sliders anteriores, mas simultaneamente em ambos
-      double valor = newValue.doubleValue();
-      labelTrem2.setVisible(true);
-      labelTrem2.setText(" " + (int) valor + " km/h ");
-      tremBrown.alterarVelocidade(sliderGeral.getValue());
-      labelTrem1.setVisible(true);
-      labelTrem1.setText(" " + (int) valor + " km/h ");
-      tremRed.alterarVelocidade(sliderGeral.getValue());});
+    tm.start();
+    tv.start();
+    
   }
   
   /* 
@@ -169,5 +151,48 @@ public class Controller {
     tremBrown.mudarPath(-90, 2);                                   // Altera a rota do Trem Marron
     tremMarron.setLayoutX(328);                                    // Altera a posicao X do Trem Marron
     tremMarron.setLayoutY(555);                                    // Altera a posicao Y do Trem Marron
+  }
+
+  class TremMarron extends Thread{
+    public void run(){
+    
+    tremBrown = new Trem(tremMarron, 2);
+    tremBrown.iniciarPercurso();                                                          // Define as propriedade necessarias para iniciar o percurso do Trem Vermelho
+
+    sliderMarron.valueProperty().addListener((observable, oldValue, newValue) -> {
+      double valor = newValue.doubleValue();
+      labelTrem2.setVisible(true);                                                        // Torna a label de velocidade do trem Marron visivel
+      labelTrem2.setText(" " + (int) valor + " km/h ");                                   // Exibe a velocidade na label do trem Marron
+      tremBrown.alterarVelocidade(sliderMarron.getValue());});                            // Utiliza  o valor do slider para alterar a velocidade do trem marron
+
+    sliderGeral.valueProperty().addListener((observable, oldValue, newValue) -> {         // Realiza as mesmas acoes dos sliders anteriores, mas simultaneamente em ambos
+      double valor = newValue.doubleValue();
+      labelTrem2.setVisible(true);
+      labelTrem2.setText(" " + (int) valor + " km/h ");
+      tremBrown.alterarVelocidade(sliderGeral.getValue());
+      labelTrem1.setVisible(true);
+      labelTrem1.setText(" " + (int) valor + " km/h ");
+      tremRed.alterarVelocidade(sliderGeral.getValue());});
+      
+    }
+  }
+  
+  class TremVermelho extends Thread{
+    public void run(){
+      tremRed = new Trem(tremVermelho, 1);
+      tremRed.iniciarPercurso();
+      
+      sliderVermelho.valueProperty().addListener((observable, oldValue, newValue) -> {
+      double valor = newValue.doubleValue();
+      labelTrem1.setVisible(true);                                                        // Torna a label de velocidade do trem vermelho visivel
+      labelTrem1.setText(" " + (int) valor + " km/h ");                                   // Exibe a velocidade na label do trem vermelho
+      tremRed.alterarVelocidade(sliderVermelho.getValue());});                            // Utiliza  o valor do slider para alterar a velocidade do trem vermelho
+        while(true){
+          tremRed.areaCritica();
+        }
+        
+      
+      
+    }
   }
 }

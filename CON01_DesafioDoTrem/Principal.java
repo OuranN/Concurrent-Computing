@@ -15,6 +15,8 @@ import javafx.fxml.FXMLLoader;
 * Funcao...........: Inicia o programa
 *************************************************************** */
 
+
+
 public class Principal extends Application{
 
   @Override
@@ -36,5 +38,6 @@ public class Principal extends Application{
 
   public static void main(String[]args){
     launch(args);
+
   }
 }

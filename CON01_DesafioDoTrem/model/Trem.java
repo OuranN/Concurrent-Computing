@@ -25,6 +25,10 @@ public class Trem {
   private ImageView trem;                                        // ImageView do trem, objeto que sera movimentado na interface 
   private Path path1;                                            // Caminho que o trem percorrera       
   private PathTransition pathTransition = new PathTransition();  // Inicializacao da biblioteca de transicoes PathTransition, utilizada para dar movimento ao trem  
+  private int trajeto1=0;
+  private int critico1=0;
+  private int trajeto2=0;
+  private int critico2=0;
 
   /* 
    * Construtor
@@ -44,17 +48,11 @@ public class Trem {
       case 1:
         path1 = new Path(                                                       // Definicao da rota 1
         new MoveTo(30, 10),
-        new LineTo(30, -90),
-        new LineTo(67, -90),
-        new LineTo(67, -160),
-        new LineTo(103, -160),
-        new LineTo(103, -360),
-        new LineTo(65, -360),
-        new LineTo(65, -425),
-        new LineTo(28, -425),
-        new LineTo(28, -600));
+        new LineTo(30, -90)
+        );
         pathTransition.setPath(path1);
         pathTransition.setOrientation(OrientationType.ORTHOGONAL_TO_TANGENT);  // Definicao da forma como o trem realizara a curva
+        
       break;
 
       case 2:
@@ -131,7 +129,7 @@ public class Trem {
     }  else { 
          this.status = true;                                                   // O trem recebe o status true: movimentando
          pathTransition.pause();                                               // Pausa o movimento para que seja possivel realizar as alteracoes
-         pathTransition.setPath(path1);                                        // Define o caminho que sera percorrido
+                                     // Define o caminho que sera percorrido
          pathTransition.setRate(velocidade);                                   // Altera a velocidade do movimento
          pathTransition.setCycleCount(PathTransition.INDEFINITE);              // Coloca o movimento em loop
          pathTransition.play();                                                // Inicia o movimento
@@ -153,9 +151,7 @@ public class Trem {
         path1 = new Path(                                                       // Definicao da rota 1
         new MoveTo(30, 10),
         new LineTo(30, -90),
-        new LineTo(67, -90),
-        new LineTo(67, -160),
-        new LineTo(103, -160),
+
         new LineTo(103, -360),
         new LineTo(65, -360),
         new LineTo(65, -425),
@@ -209,6 +205,19 @@ public class Trem {
         new LineTo(-7, 440),
         new LineTo(31, 440),
         new LineTo(31, 610));
+        pathTransition.pause();
+        pathTransition.setPath(path1);                                           // Alterando o path1, para que o trem percorra a nova rota
+        pathTransition.setOrientation(OrientationType.ORTHOGONAL_TO_TANGENT);  // Definicao da forma como o trem realizara a curva
+      break;
+
+      case 5:  
+        path1  = new Path(
+          new MoveTo(30, -90),
+          new LineTo(67, -90),
+          new LineTo(30, -90),
+          new LineTo(67, -160),
+          new LineTo(103, -160)
+    );
         pathTransition.setPath(path1);                                         // Alterando o path1, para que o trem percorra a nova rota
         pathTransition.setOrientation(OrientationType.ORTHOGONAL_TO_TANGENT);  // Definicao da forma como o trem realizara a curva
       break;
@@ -221,4 +230,15 @@ public class Trem {
   public boolean getStatus(){
     return this.status;
   }
+
+  public void areaCritica(){
+    if(trem.getTranslateY()<-90){
+      mudarPath(angulo, 5);
+    }
+    pathTransition.play(); 
+  }
+    
+   public int getCritico(){
+    return critico1;
+   }
 }
