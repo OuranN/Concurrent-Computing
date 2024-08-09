@@ -9,4 +9,6 @@ Foco no desenvolvimento de sistemas que executam **múltiplas tarefas simultanea
 
 ## Fotografo Dorminhoco
 
+![fotografo_dorminhoco](https://github.com/user-attachments/assets/87efebb6-5e47-4d22-a25e-f5c7cae77aea)
+
 ## Trânsito automato
