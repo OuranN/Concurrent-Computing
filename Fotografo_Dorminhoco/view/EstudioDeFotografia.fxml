@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="756.0" prefWidth="1368.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="756.0" fitWidth="1368.0" layoutY="1.0" pickOnBounds="true">
+         <image>
+            <Image url="@../imgs/2111.w026.n002.1088B.p1.1088.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="331.0" layoutY="610.0" prefHeight="135.0" prefWidth="299.0" style="-fx-background-color: #4F26F0; -fx-background-radius: 50; -fx-border-color: white; -fx-border-radius: 50; -fx-border-width: 2;">
+         <children>
+            <Label layoutX="41.0" layoutY="14.0" text="Velocidade Fluxo Clientes" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Slider fx:id="sliderVelocidadeClientes" layoutX="80.0" layoutY="41.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Slider>
+            <Button layoutX="85.0" layoutY="68.0" mnemonicParsing="false" onAction="#pausaCliente" prefHeight="25.0" prefWidth="129.0" style="-fx-background-color: #F0DF53;" text="Pausa Cliente">
+               <font>
+                  <Font name="Segoe UI Semibold Italic" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button layoutX="85.0" layoutY="100.0" mnemonicParsing="false" onAction="#retomaCliente" prefHeight="25.0" prefWidth="129.0" style="-fx-background-color: #F0DF53;" text="Retomar Clientes">
+               <font>
+                  <Font name="Segoe UI Semibold Italic" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+      </Pane>
+      <Pane layoutX="667.0" layoutY="610.0" prefHeight="135.0" prefWidth="299.0" style="-fx-background-color: #4F26F0; -fx-background-radius: 50; -fx-border-color: white; -fx-border-radius: 50; -fx-border-width: 2;">
+         <children>
+            <Button layoutX="85.0" layoutY="102.0" mnemonicParsing="false" onAction="#retomaBarbeiro" prefHeight="25.0" prefWidth="129.0" style="-fx-background-color: #F0DF53;" text="Retoma Fotógrafo">
+               <font>
+                  <Font name="Segoe UI Semibold Italic" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="65.0" layoutY="9.0" text="Velocidade Fotógrafo" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Slider fx:id="sliderVelocidadeBarbeiro" layoutX="82.0" layoutY="43.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Slider>
+            <Button layoutX="85.0" layoutY="68.0" mnemonicParsing="false" onAction="#pausaBarbeiro" prefHeight="25.0" prefWidth="129.0" style="-fx-background-color: #F0DF53;" text="Pausa Fotógrafo">
+               <font>
+                  <Font name="Segoe UI Semibold Italic" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+      <ImageView fitHeight="517.0" fitWidth="926.0" layoutX="235.0" layoutY="78.0" pickOnBounds="true">
+         <image>
+            <Image url="@../imgs/19Z_2102.w026.n002.213B.p1.213.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="dormindo" fitHeight="79.0" fitWidth="202.0" layoutX="604.0" layoutY="478.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../imgs/35001-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="clienteEsperando1" fitHeight="183.0" fitWidth="71.0" layoutX="945.0" layoutY="402.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../imgs/Captura_de_tela_2023-11-11_140544-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="clienteEsperando2" fitHeight="173.0" fitWidth="71.0" layoutX="940.0" layoutY="425.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../imgs/imagem_2023-11-11_141255082-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="clienteEsperando3" fitHeight="155.0" fitWidth="77.0" layoutX="945.0" layoutY="411.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../imgs/imagem_2023-11-11_145837893-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="clienteEsperando4" fitHeight="181.0" fitWidth="73.0" layoutX="945.0" layoutY="420.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../imgs/imagem_2023-11-11_150230441-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="clienteEsperando5" fitHeight="178.0" fitWidth="83.0" layoutX="945.0" layoutY="391.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../imgs/imagem_2023-11-11_150653003-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="acordado" fitHeight="192.0" fitWidth="121.0" layoutX="473.0" layoutY="393.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imgs/2-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="tirandoFoto1" fitHeight="242.0" fitWidth="90.0" layoutX="660.0" layoutY="337.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../imgs/ReadyPlayerMe-Avatar.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="tirandoFoto3" fitHeight="242.0" fitWidth="90.0" layoutX="660.0" layoutY="338.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../imgs/ReadyPlayerMe-Avatar%20(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="tirandoFoto2" fitHeight="205.0" fitWidth="98.0" layoutX="657.0" layoutY="360.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../imgs/ReadyPlayerMe-Avatar%20(4).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="tirandoFoto4" fitHeight="192.0" fitWidth="83.0" layoutX="667.0" layoutY="372.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../imgs/ReadyPlayerMe-Avatar%20(2).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="tirandoFoto5" fitHeight="192.0" fitWidth="90.0" layoutX="661.0" layoutY="367.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../imgs/ReadyPlayerMe-Avatar%20(3).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="clienteEsperando6" fitHeight="152.0" fitWidth="77.0" layoutX="945.0" layoutY="418.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../imgs/imagem_2023-11-12_191226069-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="tirandoFoto6" fitHeight="205.0" fitWidth="98.0" layoutX="655.0" layoutY="349.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../imgs/bb.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="clienteEsperando7" fitHeight="168.0" fitWidth="54.0" layoutX="945.0" layoutY="405.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../imgs/imagem_2023-11-12_195935688-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="clienteEsperando8" fitHeight="168.0" fitWidth="54.0" layoutX="945.0" layoutY="421.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../imgs/imagem_2023-11-12_200326163-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="tirandoFoto7" fitHeight="205.0" fitWidth="98.0" layoutX="658.0" layoutY="360.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../imgs/das.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="tirandoFoto8" fitHeight="205.0" fitWidth="98.0" layoutX="659.0" layoutY="349.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../imgs/cc.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="chegando1" fitHeight="168.0" fitWidth="73.0" layoutX="1173.0" layoutY="436.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../imgs/1-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="chegando3" fitHeight="168.0" fitWidth="73.0" layoutX="1191.0" layoutY="434.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../imgs/2__2_-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="chegando8" fitHeight="168.0" fitWidth="73.0" layoutX="1188.0" layoutY="434.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../imgs/2__1_-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="chegando5" fitHeight="168.0" fitWidth="73.0" layoutX="1191.0" layoutY="434.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../imgs/2__4_-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="chegando4" fitHeight="168.0" fitWidth="73.0" layoutX="1184.0" layoutY="434.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../imgs/2__3_-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="chegando2" fitHeight="168.0" fitWidth="73.0" layoutX="1191.0" layoutY="434.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../imgs/2__5_-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="chegando6" fitHeight="168.0" fitWidth="73.0" layoutX="1190.0" layoutY="434.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../imgs/2__6_-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="chegando7" fitHeight="168.0" fitWidth="73.0" layoutX="1186.0" layoutY="434.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../imgs/2__7_-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="saindo7" fitHeight="168.0" fitWidth="73.0" layoutX="85.0" layoutY="438.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../imgs/2__7_-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="saindo6" fitHeight="168.0" fitWidth="73.0" layoutX="110.0" layoutY="438.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../imgs/2__6_-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="saindo5" fitHeight="168.0" fitWidth="73.0" layoutX="110.0" layoutY="438.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../imgs/2__4_-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="saindo8" fitHeight="168.0" fitWidth="73.0" layoutX="83.0" layoutY="438.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../imgs/2__1_-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="saindo4" fitHeight="168.0" fitWidth="73.0" layoutX="95.0" layoutY="438.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../imgs/2__3_-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="saindo3" fitHeight="168.0" fitWidth="73.0" layoutX="91.0" layoutY="440.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../imgs/2__2_-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="saindo1" fitHeight="168.0" fitWidth="73.0" layoutX="84.0" layoutY="440.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../imgs/1-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="saindo2" fitHeight="168.0" fitWidth="73.0" layoutX="87.0" layoutY="436.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../imgs/2__5_-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="balaoPensamento" fitHeight="135.0" fitWidth="140.0" layoutX="1233.0" layoutY="324.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../imgs/BalaoPensamentoo.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="estudioCheio" layoutX="1258.0" layoutY="371.0" text="O estúdio está cheio " visible="false">
+         <font>
+            <Font name="System Bold" size="8.0" />
+         </font>
+      </Label>
+      <Label fx:id="vouEmbora" layoutX="1273.0" layoutY="371.0" text="Vou embora!" visible="false">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Label>
+      <Button layoutX="14.0" layoutY="711.0" mnemonicParsing="false" onAction="#abreBarbearia" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #F0DF53;" text="Start">
+         <font>
+            <Font name="Segoe UI Semibold Italic" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="140.0" layoutY="711.0" mnemonicParsing="false" onAction="#resetAll" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #F0DF53;" text="Reset">
+         <font>
+            <Font name="Segoe UI Semibold Italic" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>
