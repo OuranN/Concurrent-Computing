@@ -100,7 +100,7 @@ public class Filosofos extends Thread {
    * Retorno: Sem retorno.
    *************************************************************** */
   public void pensar() throws InterruptedException {
-    sleep(((long) (100 / tempoPensar)));
+    sleep(((long) (2000 / tempoPensar)));
     pausando();
   }
 
@@ -112,7 +112,7 @@ public class Filosofos extends Thread {
    * Retorno: Sem retorno.
    *************************************************************** */
   public void comer() throws InterruptedException {
-    sleep(((long) (100 / tempoComer)));
+    sleep(((long) (2000 / tempoComer)));
     pausando();
   }
 
@@ -124,7 +124,8 @@ public class Filosofos extends Thread {
    * Parametros: Sem parametros.
    * Retorno: Sem retorno.
    *************************************************************** */
-  public void pegarGarfos() { // i=no do filosofo
+  public void pegarGarfos() throws InterruptedException { // i=no do filosofo
+    
     try {
       pausando();
       mutex.acquire(); // Entra na RC
@@ -135,12 +136,15 @@ public class Filosofos extends Thread {
       sleep((1000));
       moveGarfos();
 
+      sleep(2);
       Platform.runLater(() -> {
         filosofoNormal.setVisible(false);
         filosofoPensando.setVisible(false);
         filosofoComendo.setVisible(true);
       });
+      sleep(2);
     } catch (InterruptedException e) {}
+    
   } // fim do metodo pegar garfos
 
   /* ***************************************************************
@@ -161,11 +165,13 @@ public class Filosofos extends Thread {
       mutex.release(); // sai da RC
       sleep(1000);
       voltaGarfos();
+      sleep(2);
       Platform.runLater(() -> {
         filosofoNormal.setVisible(false);
         filosofoPensando.setVisible(true);
         filosofoComendo.setVisible(false);
       });
+      sleep(2);
     } catch (InterruptedException e) {}
   } // fim do metodo largar garfos
 
@@ -270,88 +276,164 @@ public class Filosofos extends Thread {
       case 0:
         mutex2.acquire();
         mutex6.acquire();
-        garfos[0].setX(20);
-        garfos[0].setY(30);
-        garfos[1].setX(-30);
-        garfos[1].setY(30);
+        sleep(2);
+        Platform.runLater(() -> {
+          garfos[0].setX(20);
+          garfos[0].setY(30);
+          garfos[1].setX(-30);
+          garfos[1].setY(30);
+        });
+        sleep(2);
         break;
+
       case 1:
         mutex2.acquire();
         mutex3.acquire();
-        garfos[1].setX(39);
-        garfos[1].setY(-16);
-        garfos[2].setX(13);
-        garfos[2].setY(33);
+        sleep(2);
+        Platform.runLater(() -> {
+          garfos[1].setX(39);
+          garfos[1].setY(-16);
+          garfos[2].setX(13);
+          garfos[2].setY(33);
+        });
+        sleep(2);
         break;
+
       case 2:
         mutex3.acquire();
         mutex4.acquire();
-        garfos[2].setX(-5);
-        garfos[2].setY(-39);
-        garfos[3].setX(33);
-        garfos[3].setY(9);
+        sleep(2);
+        Platform.runLater(() -> {
+          garfos[2].setX(-5);
+          garfos[2].setY(-39);
+          garfos[3].setX(33);
+          garfos[3].setY(9);
+        });
+        sleep(2);
         break;
+
       case 3:
         mutex4.acquire();
         mutex5.acquire();
-        garfos[3].setX(-37);
-        garfos[3].setY(-16);
-        garfos[4].setX(24);
-        garfos[4].setY(-40);
+        sleep(2);
+        Platform.runLater(() -> {
+          garfos[3].setX(-37);
+          garfos[3].setY(-16);
+          garfos[4].setX(24);
+          garfos[4].setY(-40);
+        });
+        sleep(2);
         break;
+
       case 4:
         mutex5.acquire();
         mutex6.acquire();
-        garfos[4].setX(-21);
-        garfos[4].setY(43);
-        garfos[0].setX(-40);
-        garfos[0].setY(-34);
+        sleep(2);
+        Platform.runLater(() -> {
+          garfos[4].setX(-21);
+          garfos[4].setY(43);
+          garfos[0].setX(-40);
+          garfos[0].setY(-34);
+        });
+        sleep(2);
+
         break;
     }
   }
 
-  public void voltaGarfos() {
+  public void voltaGarfos() throws InterruptedException {
     switch (id) {
       case 0:
-        garfos[0].setX(0);
-        garfos[0].setY(0);
-        garfos[1].setX(0);
-        garfos[1].setY(0);
+        sleep(2);
+        Platform.runLater(() -> {
+          garfos[0].setX(0);
+          garfos[0].setY(0);
+          garfos[1].setX(0);
+          garfos[1].setY(0);
+        });
+        sleep(2);
         mutex2.release();
         mutex6.release();
         break;
+
       case 1:
-        garfos[1].setX(0);
-        garfos[1].setY(0);
-        garfos[2].setX(0);
-        garfos[2].setY(0);
+        sleep(2);
+        Platform.runLater(() -> {
+          garfos[1].setX(0);
+          garfos[1].setY(0);
+          garfos[2].setX(0);
+          garfos[2].setY(0);
+        });
+        sleep(2);
         mutex2.release();
         mutex3.release();
         break;
+
       case 2:
-        garfos[2].setX(0);
-        garfos[2].setY(0);
-        garfos[3].setX(0);
-        garfos[3].setY(0);
+        sleep(2);
+        Platform.runLater(() -> {
+          garfos[2].setX(0);
+          garfos[2].setY(0);
+          garfos[3].setX(0);
+          garfos[3].setY(0);
+        });
+        sleep(2);
         mutex3.release();
         mutex4.release();
         break;
+
       case 3:
-        garfos[3].setX(0);
-        garfos[3].setY(0);
-        garfos[4].setX(0);
-        garfos[4].setY(0);
+        sleep(2);
+        Platform.runLater(() -> {
+          garfos[3].setX(0);
+          garfos[3].setY(0);
+          garfos[4].setX(0);
+          garfos[4].setY(0);
+        });
+        sleep(2);
         mutex4.release();
         mutex5.release();
         break;
       case 4:
-        garfos[4].setX(0);
-        garfos[4].setY(0);
-        garfos[0].setX(0);
-        garfos[0].setY(0);
+        sleep(2);
+        Platform.runLater(() -> {
+          garfos[4].setX(0);
+          garfos[4].setY(0);
+          garfos[0].setX(0);
+          garfos[0].setY(0);
+        });
+        sleep(2);
+
         mutex5.release();
         mutex6.release();
         break;
     }
+  }
+
+  /* ***************************************************************
+   * Metodo: voltarEstadoInicial
+   * Funcao: Retorna as ImageVieww dos filosofos para o estado Inicial/Normal.
+   * Parametros: sem parametros.
+   * Retorno: Sem retorno.
+   *************************************************************** */
+  public void voltarEstadoInicial() throws InterruptedException{
+      sleep(2);
+      Platform.runLater(() -> {
+        filosofoNormal.setVisible(true);
+        filosofoPensando.setVisible(false);
+        filosofoComendo.setVisible(false);
+      });
+      sleep(2);
+  }
+
+  public static void reiniciarSemaforo(){
+    mutex = new Semaphore(1);
+    mutex2 = new Semaphore(1);
+    mutex3 = new Semaphore(1);
+    mutex4 = new Semaphore(1);
+    mutex5 = new Semaphore(1);
+    mutex6 = new Semaphore(1);
+    semaforos = new Semaphore[N];
+    estado = new int[N];
   }
 }
