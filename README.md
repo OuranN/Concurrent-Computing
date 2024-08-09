@@ -5,7 +5,8 @@ Foco no desenvolvimento de sistemas que executam **múltiplas tarefas simultanea
 
 ## Jantar dos Vampiros
 
-![20240809-1859-05 9192851](https://github.com/user-attachments/assets/f35f73dc-6d75-4cdc-a4a5-a4cb4d424b49)
+![20240809-1913-20 7130509 (1)](https://github.com/user-attachments/assets/104a1166-1c7a-4adf-ab33-fd9456d5ed74)
+
 
 
 ## Fotografo Dorminhoco
